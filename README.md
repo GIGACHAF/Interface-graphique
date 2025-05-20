@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.gifer.com/3rNn.gif" width="100%" height="50%"/>
+  <img src="https://i.gifer.com/3rNn.gif"/>
 </p>
 # 👋 Salut, moi c’est Kiki !
 
