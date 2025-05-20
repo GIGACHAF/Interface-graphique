@@ -1,5 +1,7 @@
 package modèle;
 
+
+// SALUT CECI EST UN TEST
 /**
  * Enumération représentant différentes couleurs.
  */
