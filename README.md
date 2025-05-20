@@ -1,6 +1,7 @@
+<p align="center">
+  <img src="https://i.gifer.com/3rNn.gif" width="100%"/>
+</p>
 # 👋 Salut, moi c’est Kiki !
-
-<img src="https://i.gifer.com/3rNn.gif" width="300"/>
 
 🎯 Développeur passionné, spécialisé en **Java**  
 💡 J’aime construire des projets propres, efficaces et bien organisés  
