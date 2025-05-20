@@ -1,6 +1,6 @@
-<p align="center">
+
   <img src="https://i.gifer.com/3rNn.gif"/>
-</p>
+
 # 👋 Salut, moi c’est Kiki !
 
 🎯 Développeur passionné, spécialisé en **Java**  
