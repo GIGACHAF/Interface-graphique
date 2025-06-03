@@ -100,9 +100,15 @@ public class Tomates {
      */
     private static List<Tomate> tomatesDeTypeAvecListe(TypeTomate typeTomate,
             List<Tomate> tomates) {
-        // A COMPLETER
-        return null;
+        List<Tomate> resultat = new LinkedList<>();
+        for (Tomate t : tomates) {
+            if (t.getType() == typeTomate) {
+                resultat.add(t);
+            }
+        }
+        return resultat;
     }
+
 
     /**
      * Retourne une liste de tomates d'une couleur spécifique.
@@ -123,8 +129,13 @@ public class Tomates {
      */
     private static List<Tomate> tomatesDeCouleurAvecListe(Couleur couleur,
             List<Tomate> tomates) {
-        // A COMPLETER
-        return null;
+        List<Tomate> resultat = new LinkedList<>();
+        for (Tomate t : tomates) {
+            if (t.getCouleur() == couleur) {
+                resultat.add(t);
+            }
+        }
+        return resultat;
     }
 
     /**
@@ -136,8 +147,13 @@ public class Tomates {
      */
     public List<Tomate> tomatesDetypeDeCouleur(TypeTomate typeTomate,
             Couleur couleur) {
-        // A COMPLETER
-        return null;
+        List<Tomate> resultat = new LinkedList<>();
+        for (Tomate t : this.tomates) {
+            if (t.getType() == typeTomate && t.getCouleur() == couleur) {
+                resultat.add(t);
+            }
+        }
+        return resultat;
     }
 
     /**

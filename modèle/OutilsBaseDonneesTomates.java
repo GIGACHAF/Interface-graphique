@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -20,8 +21,9 @@ public class OutilsBaseDonneesTomates {
      * tomates.
      *
      * @param args les arguments de la ligne de commande
+     * @throws JSONException 
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JSONException {
         String cheminFichier = "src/main/resources/data/tomates.json";
         Tomates baseTomates = générationBaseDeTomates(cheminFichier);
         System.out.println("base créée");
@@ -35,8 +37,9 @@ public class OutilsBaseDonneesTomates {
      *                      tomates
      * @return une instance de Tomates représentant la base de données de
      *         tomates
+     * @throws JSONException 
      */
-    public static Tomates générationBaseDeTomates(String cheminFichier) {
+    public static Tomates générationBaseDeTomates(String cheminFichier) throws JSONException {
         List<Tomate> tomates = lectureTomatesDepuisJson(cheminFichier);
         ajoutAléatoireTomatesApparentées(tomates);
         Tomates base = new Tomates();
@@ -49,9 +52,10 @@ public class OutilsBaseDonneesTomates {
      *
      * @param base          la base de données de tomates à sauvegarder
      * @param cheminFichier le chemin du fichier JSON où sauvegarder les données
+     * @throws JSONException 
      */
     public static void sauvegarderBaseDeTomates(Tomates base,
-            String cheminFichier) {
+            String cheminFichier) throws JSONException {
         List<Tomate> tomates = base.getTomates();
         écritureTomatesVersJson(tomates, cheminFichier);
     }
@@ -78,8 +82,9 @@ public class OutilsBaseDonneesTomates {
      * @param cheminFichier le chemin du fichier JSON contenant les données des
      *                      tomates
      * @return une liste de tomates lues à partir du fichier JSON
+     * @throws JSONException 
      */
-    private static List<Tomate> lectureTomatesDepuisJson(String cheminFichier) {
+    private static List<Tomate> lectureTomatesDepuisJson(String cheminFichier) throws JSONException {
         List<Tomate> tomates = new ArrayList<>();
         try {
             String content = new String(
@@ -119,9 +124,10 @@ public class OutilsBaseDonneesTomates {
      *
      * @param tomates       la liste des tomates à écrire dans le fichier JSON
      * @param cheminFichier le chemin du fichier JSON où écrire les données
+     * @throws JSONException 
      */
     private static void écritureTomatesVersJson(List<Tomate> tomates,
-            String cheminFichier) {
+            String cheminFichier) throws JSONException {
         JSONArray jsonArray = new JSONArray();
 
         for (Tomate tomate : tomates) {

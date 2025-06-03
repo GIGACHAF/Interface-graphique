@@ -1,6 +1,5 @@
 package modèle;
 
-
 /**
  * Enumération représentant différentes couleurs.
  */

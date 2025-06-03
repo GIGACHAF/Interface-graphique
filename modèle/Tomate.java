@@ -168,9 +168,7 @@ public class Tomate {
      */
     @Override
     public int hashCode() {
-        return Objects.hash(this.couleur, this.description,
-                this.nbGrainesParSachet, this.nomImage, this.prixTTC,
-                this.sousTitre, this.stock, this.désignation, this.type);
+    	return Objects.hash(this.désignation);
     }
 
     /**
@@ -181,23 +179,10 @@ public class Tomate {
      */
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (!(obj instanceof Tomate)) {
-            return false;
-        }
+    	if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
         Tomate other = (Tomate) obj;
-        return this.couleur == other.couleur
-                && Objects.equals(this.description, other.description)
-                && this.nbGrainesParSachet == other.nbGrainesParSachet
-                && Objects.equals(this.nomImage, other.nomImage)
-                && Float.floatToIntBits(this.prixTTC) == Float
-                        .floatToIntBits(other.prixTTC)
-                && Objects.equals(this.sousTitre, other.sousTitre)
-                && this.stock == other.stock
-                && Objects.equals(this.désignation, other.désignation)
-                && this.type == other.type;
+        return Objects.equals(this.désignation, other.désignation);
     }
 
     /**
@@ -215,6 +200,7 @@ public class Tomate {
                 + ", nbGrainesParSachet=" + this.nbGrainesParSachet
                 + ", prixTTC=" + this.prixTTC + "]";
     }
+    
 
     /**
      * Retourne une représentation sous forme de chaîne de caractères de la
